@@ -8,9 +8,7 @@ namespace CAM.Core.MVC
     using CAM.Common.Cache;
     using CAM.Common.Net.Cookie;
     using CAM.Common.Error;
-
-    using CAM.General.SessionModel;
-
+    
     using CAuth.Model.Entity;
     using CAuth.Business.Interface;
     using CAuth.Business.Aggregate;

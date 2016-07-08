@@ -52,6 +52,10 @@
     <Reference Include="CAM.General">
       <HintPath>..\..\..\CAM.General\src\CAM.General\bin\Release\CAM.General.dll</HintPath>
     </Reference>
+    <Reference Include="CUser, Version=0.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CTOOLBOX-CUser\src\CUser\bin\Release\CUser.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\CAM-DEV-Solution\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
@@ -100,6 +104,7 @@
     <Compile Include="ControllerForOnlineStatus\formatIdentity_Extend.cs" />
     <Compile Include="ControllerForOnlineStatus\IdentityInCache.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserIdentity.cs" />
     <Compile Include="_Controller_ForFilter.cs" />
     <Compile Include="_Controller_ForOnlineStatus.cs" />
     <Compile Include="_Controller_ForPopedomCheck.cs" />
@@ -116,10 +121,6 @@
     <ProjectReference Include="..\..\..\CTOOLBOX-CRole\src\CRole\CRole.csproj">
       <Project>{0c9095aa-09f5-4768-a086-6029216aed0f}</Project>
       <Name>CRole</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\CTOOLBOX-CUser\src\CUser\CUser.csproj">
-      <Project>{50523279-f747-4461-9802-4cc582598788}</Project>
-      <Name>CUser</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
