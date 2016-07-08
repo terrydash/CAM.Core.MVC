@@ -34,18 +34,29 @@ namespace CAM.Core.MVC
         /// <param name="LoginName"></param>
         /// <param name="Password"></param>
         /// <param name="from"></param>
+        /// <param name="passType"></param>
         /// <param name="oldToken"></param>
         /// <param name="newToken"></param>
         /// <returns></returns>
         private UserIdentity formatUserIdentity(string LoginName,
                                                 string Password,
                                                 EM_LOGIN_FROM from,
+                                                EM_LOGIN_PASSTYPE passType,
                                                 ref string oldToken,
                                                 ref string newToken)
         {
             try
             {
-                long passportId = loginWithPassport(LoginName, Password, from, ref oldToken, ref newToken);
+                long passportId = 0;
+                switch (passType)
+                {
+                    case EM_LOGIN_PASSTYPE.PASSWORD:
+                        passportId = loginWithPassport(LoginName, Password, from, ref oldToken, ref newToken);
+                        break;
+                    case EM_LOGIN_PASSTYPE.SMSPASSWORD:
+                        passportId = loginWithSMSPassport(LoginName, Password, from, ref oldToken, ref newToken);
+                        break;
+                }
 
                 if (passportId == 0)
                 {
