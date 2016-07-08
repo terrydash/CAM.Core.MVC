@@ -17,6 +17,11 @@ namespace CAM.Core.MVC
             PAD_ANDROID,
         }
 
+        public enum EM_LOGIN_PASSTYPE
+        {
+            PASSWORD,
+            SMSPASSWORD,
+        }
 
         #endregion
 
