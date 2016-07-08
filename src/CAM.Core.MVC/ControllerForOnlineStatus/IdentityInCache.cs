@@ -3,7 +3,6 @@
 namespace CAM.Core.MVC
 {
     using System;
-    using CAM.General.SessionModel;
     using CAM.Common.Cache;
     using CAM.Common.Error;
 
